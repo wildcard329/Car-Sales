@@ -1,4 +1,4 @@
-export const state = {
+export const initialState = {
     additionalPrice: 0,
     car: {
       price: 26395,
@@ -14,9 +14,8 @@ export const state = {
       { id: 4, name: 'Rear spoiler', price: 250 }
     ]
   };
-
   // reducer goes here
-  export const carReducer = (state, action) => {
+  export const carReducer = (state = initialState, action) => {
       switch (action.type) {
             // case ADD_FEATURE:
             //     return {

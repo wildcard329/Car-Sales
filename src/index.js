@@ -7,11 +7,10 @@ import { Provider } from 'react-redux';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 import { carReducer } from './components/reducers/carReducer';
-
 const store = createStore(
     carReducer
 )
-
+console.log(store, 'index')
 const rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
