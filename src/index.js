@@ -10,7 +10,7 @@ import { carReducer } from './components/reducers/carReducer';
 const store = createStore(
     carReducer
 )
-console.log(store, 'index')
+
 const rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
