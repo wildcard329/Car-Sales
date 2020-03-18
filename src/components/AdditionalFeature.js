@@ -12,4 +12,10 @@ const AdditionalFeature = props => {
   );
 };
 
-export default connect(null, { buyItem })(AdditionalFeature);
+const mapStateToProps = state => {
+  return {
+    additionalFeatures: state.feature
+  }
+}
+
+export default connect(mapStateToProps, { buyItem })(AdditionalFeature);

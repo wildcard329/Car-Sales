@@ -15,18 +15,14 @@ console.log(props,'app')
     // dispatch an action here to remove an item
   };
 
-  const buyItem = item => {
-    // dipsatch an action here to add an item
-  };
-
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={props.car} />
-        <AddedFeatures car={props.car} />
+        <Header />
+        <AddedFeatures />
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={props.additionalFeatures} /> 
+        <AdditionalFeatures /> 
         <Total />
       </div>
     </div>

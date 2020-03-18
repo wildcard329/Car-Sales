@@ -18,7 +18,8 @@ export const initialState = {
   };
   // reducer goes here
   export const carReducer = (state = initialState, action) => {
-      switch (action.type) {
+    console.log(state, 'reducer')  
+    switch (action.type) {
             case BUY_ITEM:
                 console.log(state)
                 return {
@@ -33,7 +34,7 @@ export const initialState = {
                     ...state,
                     car: {
                     ...state.car,
-                    features: [...state.car.features, action.payload]
+                    features: [...state.car.features.splice(0, action.payload), ...state.car.features.splice(1)]
                     }
                 }
             default:
