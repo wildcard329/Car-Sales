@@ -6,6 +6,8 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
+import { buyItem, removeFeature } from './components/actions/carActions'
+
 const App = (props) => {
 console.log(props,'app')
 
@@ -25,7 +27,7 @@ console.log(props,'app')
       </div>
       <div className="box">
         <AdditionalFeatures additionalFeatures={props.additionalFeatures} /> 
-        <Total car={props.car} additionalPrice={props.additionalPrice} />
+        <Total />
       </div>
     </div>
   );
